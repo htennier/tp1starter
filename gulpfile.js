@@ -9,7 +9,7 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create();
 
 var options = {};
-  
+
   options.assetsPath = './assets/'
   options.paths = {
     scssPath : options.assetsPath+'scss/',
@@ -21,7 +21,7 @@ var options = {};
 
 ////
 // Compile CSS
-gulp.task('css', function() { 
+gulp.task('css', function() {
   // Grab global SCSS file
   gulp.src( options.paths.scssPath+'/styles.scss' )
   // Compile SCSS to CSS
@@ -59,7 +59,7 @@ gulp.task('js', function() {
 
 
 gulp.task( 'watch', function() {
-  gulp.watch( options.paths.scssPath+'*.scss', ['css'] );
+  gulp.watch( options.paths.scssPath+'/**/*.scss', ['css'] );
 });
 
 gulp.task('build', function() {
