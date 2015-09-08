@@ -1,9 +1,11 @@
 // Common base style
 
-body {
+.container {
 	@include container(80em);
 }
 
-nav {
-	@include gallery(3 of 12);
+.col {
+	@include gallery(1);
+	height: 500px;
+	background: rgba(0,0,0,0.3);
 }
