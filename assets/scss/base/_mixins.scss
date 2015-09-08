@@ -1,0 +1,16 @@
+// Common mixins
+
+@mixin function() {
+
+}
+
+
+
+
+
+
+// Default transition to be applied on all elements
+// Usage : @include transtition() or @include transition('height', '100ms');
+@mixin transition($property: all, $time: $transition_time) {
+	transition: $property $time;
+}

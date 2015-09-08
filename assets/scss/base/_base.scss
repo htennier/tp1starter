@@ -1,0 +1,9 @@
+// Common base style
+
+body {
+	@include container(80em);
+}
+
+nav {
+	@include gallery(3 of 12);
+}
