@@ -1,3 +1,7 @@
+// Test de commentaire
+console.log('test de console');
+alert('test alerte');
+
 var s,
 widget = {
 
