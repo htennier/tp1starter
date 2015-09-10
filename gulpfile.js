@@ -9,10 +9,11 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   size = require('gulp-size');
- // browserSync = require('browser-sync').create();
+
 
 ////// Settings
-// Default files and folders
+
+//// Default files and folders
 var settings = {};
 settings.assetsPath = './assets/'
 settings.distPath = './dist/'
@@ -28,7 +29,7 @@ settings.fileName = {
   js : 'global.js'
 }
 
-// Default configuration options for plugins
+//// Default configuration options for plugins
 settings.options = {
   autoprefixer : 'last 3 versions',
   size : {
@@ -41,13 +42,9 @@ settings.options = {
   }
 }
 
-
 settings.isBuild = false;
 
-
-
 ////// Tasks
-
 
 //// Compile CSS
 gulp.task('css', function() {
@@ -66,7 +63,6 @@ gulp.task('css', function() {
   .pipe(notify(settings.fileName.css+' compiled'));
 });
 
-
 //// Compile JS
 gulp.task('js', function() {
   // Grab all JS files
@@ -82,29 +78,12 @@ gulp.task('js', function() {
     .pipe(notify(settings.fileName.js+' compiled'));
 });
 
-
 //// Optimize & Compress images
 // https://www.npmjs.com/package/gulp-imagemin/
 
-
-
-
-////
-// Browser Sync
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         proxy: "yourlocal.dev"
-//     });
-// });
-
-
-
-
-
-
-
 gulp.task( 'watch', function() {
-  gulp.watch( settings.paths.scssPath+'/**/*.scss', ['css'] );
+  gulp.watch( settings.paths.scss+'**/*.scss', ['css'] );
+  gulp.watch( settings.paths.js+'/**/*.js', ['js'] );
 });
 
 gulp.task('build', function() {
@@ -113,5 +92,5 @@ gulp.task('build', function() {
   gulp.start('js');
 });
 
-// The default task (called when you run `gulp` from cli)
+// The default task
 gulp.task( 'default', ['watch']);
