@@ -56,8 +56,9 @@ gulp.task('css', function() {
   .pipe(gulpif(settings.isBuild, prefix(settings.options.autoprefixer)))
   // [BUILD] Minifiy
   .pipe(gulpif(settings.isBuild, compress()))
-  // Create final CSS file
+  // Show file size
   .pipe(size(settings.options.size))
+  // Create final file
   .pipe(gulp.dest(settings.paths.css))
   // Notify end task
   .pipe(notify(settings.fileName.css+' compiled'));
