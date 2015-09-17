@@ -1,29 +1,13 @@
 // Typography base
 
-h1 { 
+// Typography
+$fonts: (
+	base-size: 13rem,
+	line-height: 1.3
+);
 
-}
-
-h2 {
-
-}
-
-h3 {
-
-}
-
-h4 {
-
-}
-
-h5 {
-
-}
-
-h6 {
-
-}
-
-a {
-
+@function font($key) {
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
 }

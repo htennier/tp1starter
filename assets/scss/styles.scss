@@ -1,9 +1,12 @@
 // Import TP1 starter base
 @import "base/grid";
-@import "base/reboot";
-@import "base/base";
-@import "base/mixins";
 @import "base/variables";
+
+@import "base/base";
+@import "base/breakpoints";
+@import "base/colors";
+@import "base/mixins";
+@import "base/reboot";
 @import "base/typography";
 
 // Import custom project file

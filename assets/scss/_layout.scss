@@ -3,6 +3,7 @@
 html {
 	margin: 0;
 	@include transition('max-height');
+	color: color(main);
 }
 body {
 	padding: 0;
@@ -13,4 +14,8 @@ p {
 
 a {
 	color: #FF00ff;
+}
+
+h1 {
+	color: color(main);
 }

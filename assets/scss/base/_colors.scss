@@ -1,0 +1,13 @@
+// Set colors variable
+$colors: (
+	main: #ff0000,
+	secondary: #0000ff
+);
+
+// Get color function
+// Usage : color(main)
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+}
